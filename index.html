@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Todo App</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="app/assets/styles/app.css"/>
+
+    <script src="node_modules/babel-core/browser.js"></script>
+    <script src="node_modules/es6-module-loader/dist/es6-module-loader.js"></script>
+    <script src="node_modules/lodash/index.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <h1>JS Enterprise ToDo</h1>
+
+    <div id="add-todo-panel" class="input-group">
+        <input id="new-todo-description"
+               type="text"
+               class="form-control"
+               onkeyup="todo.onKeyUp(event);"
+               placeholder="Add new todo...">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button" onclick="todo.onAdd();">
+                <i class="glyphicon glyphicon-plus"></i>
+            </button>
+          </span>
+    </div>
+
+    <ul id="todo-list-panel" class="list-group"></ul>
+    <div class="menu">
+        <button class="btn btn-danger" onclick="todo.onClear()">Clear</button>
+    </div>
+</div>
+
+<script>
+    System.baseURL = '/app/';
+    System.transpiler = 'babel';
+    System.babelOptions = {
+        sourceMaps: 'inline'
+    };
+</script>
+
+<script>
+    System.import('app').then(function (module) {
+        new module.App(window);
+    });
+</script>
+</body>
+</html>

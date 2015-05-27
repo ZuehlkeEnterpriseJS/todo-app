@@ -1,0 +1,19 @@
+{
+  "name": "todo-app",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Marvin Minder & Christian Kohler @Zuehlke",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "5.4.7",
+    "bootstrap": "3.3.4",
+    "es6-module-loader": "0.16.6"
+  }
+}
