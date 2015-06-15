@@ -47,15 +47,19 @@ describe('TodoService', function () {
         });
 
         it('should sort todos by status', function () {
-            todoServicetodoService.addTodo('todo1');
-            todoServicetodoService.addTodo('todo2');
-            todoServicetodoService.addTodo('todo3');
+            todoService.addTodo('todo1');
+            todoService.addTodo('todo2');
+            todoService.addTodo('todo3');
 
-            service.setDone(1);
+            todoService.setDone(2);
 
             expect(todoService.todos[0].description).toBe('todo1');
             expect(todoService.todos[1].description).toBe('todo3');
             expect(todoService.todos[2].description).toBe('todo2');
+
+            expect(todoService.todos[0].done).toBe(false);
+            expect(todoService.todos[1].done).toBe(false);
+            expect(todoService.todos[2].done).toBe(true);
         });
 
     });

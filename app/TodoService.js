@@ -1,4 +1,4 @@
-import statusComparator from 'statusComparator';
+import statusComparator from './statusComparator';
 
 class TodoService {
 
