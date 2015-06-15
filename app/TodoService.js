@@ -1,3 +1,5 @@
+import statusComparator from 'statusComparator';
+
 class TodoService {
 
     constructor() {
@@ -28,6 +30,7 @@ class TodoService {
 
         if (matchingTodos.length === 1) {
             matchingTodos[0].done = true;
+            this._todos.sort(statusComparator);
         } else {
             throw new Error(`No Todo item with id ${id} found!`);
         }
