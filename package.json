@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "karma start --single-run",
     "lint": "eslint ./app/"
   },
   "author": "Marvin Minder & Christian Kohler @Zuehlke",
@@ -16,5 +16,16 @@
     "babel-core": "5.4.7",
     "bootstrap": "3.3.4",
     "es6-module-loader": "0.16.6"
+  },
+  "devDependencies": {
+    "eslint": "^0.23.0",
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.4",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.36",
+    "karma-browserify": "^4.2.1",
+    "karma-jasmine": "^0.3.5",
+    "karma-phantomjs-launcher": "^0.2.0",
+    "phantomjs": "^1.9.17"
   }
 }

@@ -1,4 +1,4 @@
-import todoService from 'TodoService';
+import todoService from './TodoService';
 
 export default class TodoController {
 
@@ -10,7 +10,7 @@ export default class TodoController {
     onAdd() {
         const description = this.descriptionInputElement.value;
 
-        if (Description) {
+        if (description) {
             todoService.addTodo(description);
             this.descriptionInputElement.value = '';
             this.repaint();

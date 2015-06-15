@@ -1,4 +1,4 @@
-import TodoController from 'TodoController';
+import TodoController from './TodoController';
 
 export class App {
     constructor(window) {
