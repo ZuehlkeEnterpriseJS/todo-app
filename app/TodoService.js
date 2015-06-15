@@ -8,7 +8,8 @@ class TodoService {
     }
 
     getAndIncrementIdCounter() {
-        return this.idCounter++;
+        this.idCounter = this.idCounter + 1;
+        return this.idCounter;
     }
 
     addTodo(description) {

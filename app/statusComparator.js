@@ -8,4 +8,4 @@ export default function statusComparator(todo1, todo2) {
     }
 
     return result;
-};
+}

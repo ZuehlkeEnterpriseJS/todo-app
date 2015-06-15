@@ -10,7 +10,7 @@ export default class TodoController {
     onAdd() {
         const description = this.descriptionInputElement.value;
 
-        if (description) {
+        if (Description) {
             todoService.addTodo(description);
             this.descriptionInputElement.value = '';
             this.repaint();
@@ -26,7 +26,7 @@ export default class TodoController {
     }
 
     repaint() {
-        this.todoListElement.innerHTML = "";
+        this.todoListElement.innerHTML = '';
         todoService.todos.forEach(todo => this.render(todo));
     }
 
